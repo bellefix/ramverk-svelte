@@ -1,3 +1,9 @@
+<script>
+  let noteDate = $state("");
+  let noteTitle = $state("");
+  let noteContent = $state("");
+</script>
+
 <main class="notes-app">
   <section class="note-form">
     <h1>Lektionsanteckningar</h1>
@@ -5,7 +11,7 @@
     <form>
       <div class="form-group">
         <label for="note-date">Datum</label>
-        <input id="note-date" type="date" />
+        <input id="note-date" type="date" bind:value={noteDate} />
       </div>
 
       <div class="form-group">
@@ -13,6 +19,7 @@
         <input
           id="note-title"
           type="text"
+          bind:value={noteTitle}
           placeholder="Vad handlade lektionen om?"
         />
       </div>
@@ -22,6 +29,7 @@
         <textarea
           id="note-content"
           rows="12"
+          bind:value={noteContent}
           placeholder="Skriv dina anteckningar här..."
         ></textarea>
       </div>
