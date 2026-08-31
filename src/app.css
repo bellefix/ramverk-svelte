@@ -1,0 +1,163 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #243042;
+  background: #f7f5fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.notes-app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.note-form {
+  background: white;
+  border: 1px solid #e4e0ea;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(47, 39, 64, 0.08);
+}
+
+.saved-notes {
+  min-width: 0;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  color: #172033;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  color: #243042;
+  background: white;
+  border: 1px solid #d6d0df;
+  border-radius: 10px;
+}
+
+textarea {
+  min-height: 280px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #8b6ccf;
+  border-color: transparent;
+}
+
+button {
+  padding: 12px 20px;
+  color: white;
+  background: #7253bd;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5f43a3;
+}
+
+.saved-notes > p {
+  color: #6c7480;
+}
+
+ul {
+  display: grid;
+  gap: 18px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e4e0ea;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(47, 39, 64, 0.07);
+}
+
+li strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #7253bd;
+  font-size: 1.1rem;
+}
+
+li p {
+  margin: 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.month-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e4e0ea;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  color: #243042;
+  background: white;
+  border: 1px solid #d6d0df;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: 2px solid #8b6ccf;
+  border-color: transparent;
+}
+
+@media (max-width: 800px) {
+  .notes-app {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}
